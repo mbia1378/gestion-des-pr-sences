@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">gestion des présences</string>
+    <string name="Sous_titre_page_accueil">Classes</string>
+    <string name="send_feedback">Faire un Feedback</string>
+    <string name="more">Plus</string>
+    <string name="attendance_management">Gestion des Présences</string>
+    <string name="search">Rechercher</string>
+    <string name="add">Ajouter une classe</string>
+    <string name="help">Aide</string>
+    <string name="add_student">Ajouter un étudiant</string>
+    <string name="Report">Rapport</string>
+    <string name="presences_takes">Présences pour aujourd\'hui prises, revenez demain</string>
+    <string name="quick_attendance">Appel Rapide:</string>
+    <string name="Add_some_student">Ajouter plus d\'étudiants !</string>
+    <string name="create_class">Créer une classe</string>
+    <string name="create_class_and_create_students">Créez simplement votre classe pour gérer les présences quotidiennes et les signaler. Ajouter des étudiants à l\'étape suivante</string>
+    <string name="theme">Thème</string>
+    <string name="class_name">Nom classe</string>
+    <string name="select_theme">Choisir thème :</string>
+    <string name="create">Créer</string>
+    <string name="submit">Soumettre</string>
+    <string name="student_name">Nom étudiant:</string>
+    <string name="reg_number">Numéro d\'enregistrement:</string>
+    <string name="phone_number">Numéro de téléphone:</string>
+    <string name="save">Sauvegarder</string>
+    <string name="modify">Modifier</string>
+    <string name="total_student">\"Etudiants totaux : \"</string>
+    <string name="attendance_report">Rapport de présences :</string>
+    <string name="cancel">Annuler</string>
+</resources>
