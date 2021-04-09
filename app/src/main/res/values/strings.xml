@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">gestion des présences</string>
+    <string name="app_name">IAI-Attendance</string>
     <string name="Sous_titre_page_accueil">Classes</string>
     <string name="send_feedback">Faire un Feedback</string>
     <string name="more">Plus</string>
-    <string name="attendance_management">Gestion des Présences</string>
+    <string name="attendance_management">Gestion des Présences - par IAI-Cameroun</string>
     <string name="search">Rechercher</string>
     <string name="add">Ajouter une classe</string>
     <string name="help">Aide</string>
