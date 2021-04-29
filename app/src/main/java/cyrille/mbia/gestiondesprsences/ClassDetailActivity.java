@@ -16,6 +16,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -200,7 +201,7 @@ public class ClassDetailActivity extends AppCompatActivity {
                 lovelyCustomDialog = new LovelyCustomDialog(ClassDetailActivity.this)
                         .setView(view1)
                         .setTopColorRes(R.color.theme_light)
-                        .setTitle("Add Student")
+                        .setTitle("Ajouter Etudiant")
                         .setIcon(R.drawable.ic_baseline_person_add_24)
                         .setCancelable(false)
                         .setListener(R.id.add_btn_popup, new View.OnClickListener() {
@@ -385,12 +386,25 @@ public class ClassDetailActivity extends AppCompatActivity {
         progressDialog.setMessage("Création de la classe..");
         progressDialog.show();
 
+        final Students_List students_list=new Students_List();
+
+        Number current_id=realm.where(Students_List.class).max("id");
+        final long nextId;
+        if(current_id==null){
+            nextId=1;
+        }
+        else{
+            nextId=current_id.intValue()+1;
+        }
+
+
+
         transaction = realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                Students_List students_list = realm.createObject(Students_List.class);
-                String id = studentName+regNo;
-                students_list.setId(id);
+                Students_List students_list = realm.createObject(Students_List.class, nextId);
+                //long id = nextId;
+                //students_list.setId(id);
                 students_list.setName_student(studentName);
                 students_list.setRegNo_student(regNo);
                 students_list.setMobileNo_student(mobileNo);
@@ -410,6 +424,7 @@ public class ClassDetailActivity extends AppCompatActivity {
         }, new Realm.Transaction.OnError() {
             @Override
             public void onError(Throwable error) {
+                Log.i("onFailure","Throwable ",error);
                 progressDialog.dismiss();
                 lovelyCustomDialog.dismiss();
                 Toast.makeText(ClassDetailActivity.this, "Erreur!", Toast.LENGTH_SHORT).show();

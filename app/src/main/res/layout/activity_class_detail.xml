@@ -25,7 +25,7 @@
             android:animateLayoutChanges="true"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:expandedTitleMargin="16dp"
-            app:contentScrim="@color/White"
+            app:contentScrim="@color/colorPrimary"
             app:title=" "
             app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutTitleColor"
             app:collapsedTitleTextAppearance="@style/CollapsingToolbarLayoutTitleColor_Collapsed"

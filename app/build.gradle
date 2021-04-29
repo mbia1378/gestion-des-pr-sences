@@ -8,11 +8,17 @@ android {
     defaultConfig {
         applicationId "cyrille.mbia.gestiondesprsences"
         minSdkVersion 23
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        //noinspection OldTargetApi
+        targetSdkVersion 29
+        versionCode 4
+        versionName "1.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 
     buildTypes {
@@ -42,7 +48,8 @@ dependencies {
     //External Libraries-------------------
 
     implementation 'io.realm:android-adapters:1.4.0'
-    implementation 'com.github.ceryle:RadioRealButton:v1.3'
+    implementation 'com.github.patgdut:RadioRealButton:v2.1.2'
+    //implementation 'com.github.ceryle:RadioRealButton:v2.1.1'
     implementation 'com.yarolegovich:lovely-dialog:1.1.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

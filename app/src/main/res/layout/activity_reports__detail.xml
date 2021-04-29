@@ -21,7 +21,7 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
+            android:text="Rapport de présences"
             android:textColor="@color/text_color_dark"
             android:textSize="18dp"
             android:textStyle="bold"

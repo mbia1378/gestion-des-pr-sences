@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
-import co.ceryle.radiorealbutton.library.RadioRealButton;
-import co.ceryle.radiorealbutton.library.RadioRealButtonGroup;
+import co.ceryle.radiorealbutton.RadioRealButton;
+import co.ceryle.radiorealbutton.RadioRealButtonGroup;
 import cyrille.mbia.gestiondesprsences.realm.Class_Names;
 import io.realm.Realm;
 import io.realm.RealmAsyncTask;
@@ -56,9 +56,9 @@ public class insert_class extends AppCompatActivity {
         final RadioRealButton button6 = (RadioRealButton) findViewById(R.id.button6);
 
         RadioRealButtonGroup group = (RadioRealButtonGroup) findViewById(R.id.group);
-        group.setOnClickedButtonPosition(new RadioRealButtonGroup.OnClickedButtonPosition() {
+        group.setOnClickedButtonListener(new RadioRealButtonGroup.OnClickedButtonListener() {
             @Override
-            public void onClickedButtonPosition(int position) {
+            public void onClickedButton(RadioRealButton button, int position) {
                 position_bg = String.valueOf(position);
             }
         });

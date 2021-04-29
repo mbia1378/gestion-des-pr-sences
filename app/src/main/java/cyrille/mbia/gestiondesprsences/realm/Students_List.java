@@ -1,19 +1,21 @@
 package cyrille.mbia.gestiondesprsences.realm;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class Students_List extends RealmObject {
-    String id;
+    @PrimaryKey
+    long id;
     String name_student;
     String regNo_student;
     String mobileNo_student;
     String class_id;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

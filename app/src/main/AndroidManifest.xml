@@ -9,10 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity"
+                  android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name="cyrille.mbia.gestiondesprsences.Reports_Detail_Activity"
+            android:name=".Reports_Detail_Activity"
             android:theme="@style/AppTheme2" />
-        <activity android:name=".ReportActivity"></activity>
+        <activity android:name=".ReportActivity" />
         <activity
             android:name=".insert_class"
             android:theme="@style/AppTheme2" />
@@ -20,11 +28,6 @@
             android:name=".ClassDetailActivity"
             android:theme="@style/FullScreenTheme" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

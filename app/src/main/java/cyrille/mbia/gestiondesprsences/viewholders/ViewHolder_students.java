@@ -33,6 +33,7 @@ public class ViewHolder_students extends RecyclerView.ViewHolder{
     public final TextView student_regNo;
     public LinearLayout layout;
     public String stuName, regNo, mobileNo, mRoomID;
+    public long iD;
     public RadioGroup radioGroup;
     public RadioButton radioButton_present, radioButton_absent;
 
@@ -146,10 +147,11 @@ public class ViewHolder_students extends RecyclerView.ViewHolder{
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                iD = mList.get(getAbsoluteAdapterPosition()).getId();
                 stuName = mList.get(getAbsoluteAdapterPosition()).getName_student();
                 regNo = mList.get(getAbsoluteAdapterPosition()).getRegNo_student();
                 mobileNo = mList.get(getAbsoluteAdapterPosition()).getMobileNo_student();
-                Student_Edit_Sheet student_edit_sheet = new Student_Edit_Sheet(stuName, regNo, mobileNo);
+                Student_Edit_Sheet student_edit_sheet = new Student_Edit_Sheet(iD, stuName, regNo, mobileNo);
                 student_edit_sheet.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetTheme);
                 student_edit_sheet.show(((FragmentActivity)view.getContext()).getSupportFragmentManager(), "BottomSheet");
             }

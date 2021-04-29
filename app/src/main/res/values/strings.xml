@@ -24,7 +24,9 @@
     <string name="phone_number">Numéro de téléphone:</string>
     <string name="save">Sauvegarder</string>
     <string name="modify">Modifier</string>
-    <string name="total_student">\"Etudiants totaux : \"</string>
+    <string name="total_student">Etudiants totaux : \</string>
     <string name="attendance_report">Rapport de présences :</string>
     <string name="cancel">Annuler</string>
+    <string name="by_iai_cam">Par IAI-Cameroun - V1.3</string>
+    <string name="iai_attendance">IAI Attendance</string>
 </resources>
